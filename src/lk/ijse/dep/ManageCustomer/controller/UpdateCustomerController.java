@@ -52,6 +52,19 @@ public class UpdateCustomerController {
 
 
     public void updateOnAction(ActionEvent actionEvent) {
+        CustomerTM selectedCustomer = tblCustome.getSelectionModel().getSelectedItem();
+        try {
+            updateCustomer(new CustomerTM(selectedCustomer.getId(),
+                    txtName.getText(),
+                    txtAddress.getText()));
+            selectedCustomer.setName(txtName.getText());
+            selectedCustomer.setAddress(txtAddress.getText());
+            tblCustome.refresh();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
     }
 
 
@@ -71,9 +84,10 @@ public class UpdateCustomerController {
     }
     public void updateCustomer(CustomerTM customer) throws SQLException {
         Connection connection = DBConnection.getInstance().getConnection();
-        PreparedStatement pstm = connection.prepareStatement("INSERT INTO Customer VALUES (?,?)");
-        pstm.setString(1, customer.getName());
-        pstm.setString(2, customer.getAddress());
+        PreparedStatement pstm = connection.prepareStatement("INSERT INTO Customer VALUES (?,?,?)");
+        pstm.setString(1,customer.getId());
+        pstm.setString(2, customer.getName());
+        pstm.setString(3, customer.getAddress());
         if (pstm.executeUpdate() == 0){
             throw new RuntimeException("Something went wrong");
         }
