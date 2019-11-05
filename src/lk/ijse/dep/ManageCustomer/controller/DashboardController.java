@@ -28,7 +28,13 @@ public class DashboardController {
 
     }
 
-    public void btnUpdt_OnAction(ActionEvent actionEvent) {
+    public void btnUpdt_OnAction(ActionEvent actionEvent) throws IOException {
+
+        Parent root = FXMLLoader.load(this.getClass().getResource("/lk/ijse/dep/ManageCustomer/view/UpdateCustomer.fxml"));
+        Stage primaryStage  = (Stage) this.root.getScene().getWindow();
+        primaryStage.setScene(new Scene(root));
+        primaryStage.centerOnScreen();
+
 
     }
 
