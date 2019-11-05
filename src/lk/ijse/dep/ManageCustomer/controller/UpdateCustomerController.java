@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import lk.ijse.dep.ManageCustomer.db.DBConnection;
 import lk.ijse.dep.ManageCustomer.util.CustomerTM;
@@ -17,13 +18,37 @@ public class UpdateCustomerController {
     public TextField txtId;
     public TextField txtName;
     public TextField txtAddress;
-    public TableView tblCustome;
+    public TableView <CustomerTM>tblCustome;
     public TableColumn clmId;
     public TableColumn clmName;
     public TableColumn clmAddress;
     public Button btnUpdate;
 
+    public void initialize() {
 
+        clmId.setCellValueFactory(new PropertyValueFactory<>("id"));
+        clmAddress.setCellValueFactory(new PropertyValueFactory<>("Address"));
+        clmName.setCellValueFactory(new PropertyValueFactory<>("Name"));
+
+        tblCustome.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            {
+                CustomerTM selectedItem = tblCustome.getSelectionModel().getSelectedItem();
+
+                txtId.setText(selectedItem.getId());
+                txtName.setText(selectedItem.getName());
+                txtAddress.setText(selectedItem.getAddress());
+            }
+        });
+
+
+
+
+        try {
+            loadAllCustomers();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
 
     public void updateOnAction(ActionEvent actionEvent) {
