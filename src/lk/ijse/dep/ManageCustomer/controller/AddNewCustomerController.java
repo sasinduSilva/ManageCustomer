@@ -14,7 +14,7 @@ public class AddNewCustomerController {
     public TextField txtId;
     public TextField txtName;
     public TextField txtAddress;
-    public TableView tblCustome;
+    public TableView <CustomerTM>tblCustome;
     public TableColumn clmId;
     public TableColumn clmName;
     public TableColumn clmAddress;
@@ -25,27 +25,34 @@ public class AddNewCustomerController {
 
     public void initialize() {
 
+        clmId.setCellValueFactory(new PropertyValueFactory<>("id"));
+        clmAddress.setCellValueFactory(new PropertyValueFactory<>("Address"));
+        clmName.setCellValueFactory(new PropertyValueFactory<>("Name"));
+
         tblCustome.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-            if (null != newValue) {
-                btnSave.setText("Update");
-                txtId.setText(newValue.getId());
-                txtName.setText(newValue.getName());
-                txtAddress.setText(newValue.getAddress());
+             {
+                 CustomerTM selectedItem = tblCustome.getSelectionModel().getSelectedItem();
+
+                 txtId.setText(selectedItem.getId());
+                txtName.setText(selectedItem.getName());
+                txtAddress.setText(selectedItem.getAddress());
             }
         });
 
 
-        clmId.setCellValueFactory(new PropertyValueFactory<>("id"));
-        clmName.setCellValueFactory(new PropertyValueFactory<>("name"));
-        clmAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
 
 
+        try {
+            loadAllCustomers();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
         public void addNewOnAction(ActionEvent actionEvent) {
             txtId.clear();
             txtName.clear();
             txtAddress.clear();
-            tblCustome.getSelectionModel().clearSelection();
+        //    tblCustome.getSelectionModel().clearSelection();
             txtName.setDisable(false);
             txtAddress.setDisable(false);
             txtName.requestFocus();
@@ -105,7 +112,7 @@ public class AddNewCustomerController {
 
     public String getLastCustomerId() throws SQLException{
         Connection connection = DBConnection.getInstance().getConnection();
-        PreparedStatement pstm = connection.prepareStatement("SELECT customerId FROM Customer ORDER BY customerId DESC LIMIT 1");
+        PreparedStatement pstm = connection.prepareStatement("SELECT Id FROM Customer ORDER BY Id DESC LIMIT 1");
         ResultSet rst = pstm.executeQuery();
         if (rst.next()){
             return rst.getString(1);

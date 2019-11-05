@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2204cbb7-f532-4c60-8273-3f646b30f3f4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ManageCustomer/lk/ijse/dep/ManageCustomer/controller/AddNewCustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ManageCustomer/lk/ijse/dep/ManageCustomer/controller/AddNewCustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ManageCustomer/lk/ijse/dep/ManageCustomer/controller/DashboardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ManageCustomer/lk/ijse/dep/ManageCustomer/controller/DashboardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ManageCustomer/lk/ijse/dep/ManageCustomer/view/AddNewCustomer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ManageCustomer/lk/ijse/dep/ManageCustomer/view/AddNewCustomer.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lk/ijse/dep/ManageCustomer/controller/AddNewCustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lk/ijse/dep/ManageCustomer/controller/AddNewCustomerController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,6 +41,13 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="customer: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Customer@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="customer: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="customer: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
@@ -46,8 +56,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/lk/ijse/dep/ManageCustomer/controller/AddNewCustomerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="73" column="38" lean-forward="true" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
+            <state relative-caret-position="181">
+              <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -166,7 +176,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572982130889" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572983131885" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Practicles/day5/layered-posOriginal/layered-pos" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -220,15 +230,16 @@
       <updated>1572965693051</updated>
       <workItem from="1572965696525" duration="3227000" />
       <workItem from="1572970869203" duration="5700000" />
-      <workItem from="1572976602704" duration="5444000" />
+      <workItem from="1572976602704" duration="6507000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11144000" />
+    <option name="totallyTimeSpent" value="12207000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -239,13 +250,13 @@
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.33333334" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33333334" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3992674" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Console" order="7" weight="0.32967034" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.44444445" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.44444445" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50065106" side_tool="true" weight="0.32967034" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32967034" />
@@ -257,7 +268,7 @@
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.041015625" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.11002604" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
@@ -317,13 +328,6 @@
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/61ace86d-f560-4162-95e1-a780236fa306/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://61ace86d-f560-4162-95e1-a780236fa306/schema/customer/table/customer">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/error.log">
       <provider selected="true" editor-type-id="text-editor">
@@ -426,10 +430,17 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
+    <entry file="das://61ace86d-f560-4162-95e1-a780236fa306/schema/customer/table/customer">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/lk/ijse/dep/ManageCustomer/controller/AddNewCustomerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="73" column="38" lean-forward="true" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
+        <state relative-caret-position="181">
+          <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
         </state>
       </provider>
     </entry>
