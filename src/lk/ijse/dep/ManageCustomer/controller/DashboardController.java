@@ -12,6 +12,7 @@ public class DashboardController {
     public Button btnSrch;
 
     public void btnAdd_OnAction(ActionEvent actionEvent) {
+
     }
 
     public void btnUpdt_OnAction(ActionEvent actionEvent) {
