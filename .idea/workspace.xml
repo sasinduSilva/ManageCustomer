@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2204cbb7-f532-4c60-8273-3f646b30f3f4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/error.log.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ManageCustomer/lk/ijse/dep/ManageCustomer/controller/DeleteController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ManageCustomer/lk/ijse/dep/ManageCustomer/controller/DeleteController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ManageCustomer/lk/ijse/dep/ManageCustomer/controller/DeleteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ManageCustomer/lk/ijse/dep/ManageCustomer/controller/DeleteController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lk/ijse/dep/ManageCustomer/controller/DeleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lk/ijse/dep/ManageCustomer/controller/DeleteController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,6 +50,9 @@
       </path>
     </expand>
     <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="ManageCustomer" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -112,6 +119,26 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@fa23b721" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@fa23b721" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@59d4de87" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -123,7 +150,7 @@
       <option name="presentableId" value="Default" />
       <updated>1572965693051</updated>
       <workItem from="1572965696525" duration="3770000" />
-      <workItem from="1572974246329" duration="3418000" />
+      <workItem from="1572974246329" duration="4133000" />
     </task>
     <servers />
   </component>
@@ -145,5 +172,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ManageCustomer$Appinitializer.ic" NAME="Appinitializer Coverage Results" MODIFIED="1572980978104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

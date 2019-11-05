@@ -7,6 +7,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -76,6 +77,24 @@ public class DeleteController implements Initializable {
     }
 
     public void btnDelete_OnAction(ActionEvent actionEvent) {
+        CustomerTM selectedItem = tblCstmrs.getSelectionModel().getSelectedItem();
+        if (selectedItem!=null){
+            String id = selectedItem.getId();
+            Connection connection = DBConnection.getInstance().getConnection();
+            try {
+                PreparedStatement pstm = connection.prepareStatement("DELETE FROM customer WHERE id='"+id+"'");
+                int count = pstm.executeUpdate();
+                if (count>0){
+                    new Alert(Alert.AlertType.INFORMATION,"Deleted Successfully").show();
+                    tblCstmrs.getItems().remove(selectedItem);
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+
+
+        }
+
     }
 
     public void btnCncl_OnAction(ActionEvent actionEvent) {
