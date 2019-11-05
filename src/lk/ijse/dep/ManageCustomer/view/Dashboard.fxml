@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.ManageCustomer.controller.DashboardController">
+<AnchorPane  fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.ManageCustomer.controller.DashboardController">
    <children>
       <Button fx:id="btnAdd" layoutX="33.0" layoutY="109.0" mnemonicParsing="false" onAction="#btnAdd_OnAction" prefHeight="44.0" prefWidth="117.0" text="Add Customer" />
       <Button fx:id="btnUpdt" layoutX="161.0" layoutY="109.0" mnemonicParsing="false" onAction="#btnUpdt_OnAction" prefHeight="44.0" prefWidth="131.0" text="Update Cutoemr" />
