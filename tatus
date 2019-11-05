@@ -1,0 +1,11 @@
+[33m386c60b[m[33m ([m[1;36mHEAD -> [m[1;32mrandi[m[33m)[m HEAD@{0}: commit: Add getLastCustomerId method
+[33mfdc22d8[m HEAD@{1}: commit: Replace Dashboard.fxml
+[33mfdadf83[m HEAD@{2}: reset: moving to fdadf83
+[33md7c8b04[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{3}: reset: moving to d7c8b04
+[33mfdadf83[m HEAD@{4}: commit: Set AddNewCustomer on action from dashboard
+[33m04ecddf[m HEAD@{5}: commit: Add variables to AddNewCustomerController
+[33mcdef328[m HEAD@{6}: commit: Modified Add New Customer UI
+[33m4372495[m HEAD@{7}: commit: Add fxml file and controller called AddNewCustomer and AddNewCustomerController
+[33md7c8b04[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{8}: checkout: moving from master to randi
+[33md7c8b04[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{9}: commit: Edit passward
+[33me787277[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{10}: clone: from https://github.com/sasinduSilva/ManageCustomer.git

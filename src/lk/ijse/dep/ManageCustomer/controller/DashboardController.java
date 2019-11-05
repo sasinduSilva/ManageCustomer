@@ -21,14 +21,15 @@ public class DashboardController {
     public void btnAdd_OnAction(ActionEvent actionEvent) throws IOException {
 
 
-            Parent root = FXMLLoader.load(this.getClass().getResource("/lk/ijse/dep/ManageCustomer/view/AddNewCustomer.fxml"));
+        Parent root = FXMLLoader.load(this.getClass().getResource("/lk/ijse/dep/ManageCustomer/view/AddNewCustomer.fxml"));
         Stage primaryStage  = (Stage) this.root.getScene().getWindow();
-            primaryStage.setScene(new Scene(root));
-            primaryStage.centerOnScreen();
+        primaryStage.setScene(new Scene(root));
+        primaryStage.centerOnScreen();
 
     }
 
     public void btnUpdt_OnAction(ActionEvent actionEvent) {
+
     }
 
     public void btnDlte_OnAction(ActionEvent actionEvent) {
