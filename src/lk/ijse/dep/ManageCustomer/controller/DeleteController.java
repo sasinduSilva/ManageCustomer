@@ -87,6 +87,7 @@ public class DeleteController implements Initializable {
                 if (count>0){
                     new Alert(Alert.AlertType.INFORMATION,"Deleted Successfully").show();
                     tblCstmrs.getItems().remove(selectedItem);
+                    btnCncl_OnAction(actionEvent);
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -95,9 +96,13 @@ public class DeleteController implements Initializable {
 
         }
 
+
     }
 
     public void btnCncl_OnAction(ActionEvent actionEvent) {
+        txtId.clear();
+        txtName.clear();
+        txtAddress.clear();
     }
 
 
