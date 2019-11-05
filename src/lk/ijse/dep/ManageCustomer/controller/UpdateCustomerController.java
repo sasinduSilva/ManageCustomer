@@ -84,10 +84,11 @@ public class UpdateCustomerController {
     }
     public void updateCustomer(CustomerTM customer) throws SQLException {
         Connection connection = DBConnection.getInstance().getConnection();
-        PreparedStatement pstm = connection.prepareStatement("INSERT INTO Customer VALUES (?,?,?)");
-        pstm.setString(1,customer.getId());
-        pstm.setString(2, customer.getName());
-        pstm.setString(3, customer.getAddress());
+        PreparedStatement pstm = connection.prepareStatement("UPDATE Customer SET name=?, address=? WHERE Id=?");
+
+        pstm.setString(1, customer.getName());
+        pstm.setString(2, customer.getAddress());
+        pstm.setString(3,customer.getId());
         if (pstm.executeUpdate() == 0){
             throw new RuntimeException("Something went wrong");
         }
