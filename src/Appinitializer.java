@@ -37,7 +37,7 @@ public class Appinitializer extends Application {
             rootLogger.addHandler(fileHandler);
 
             DBConnection.getInstance().getConnection();
-            URL resource = this.getClass().getResource("/lk/ijse/dep/ManageCustomer/view/DeleteCustomer.fxml");
+            URL resource = this.getClass().getResource("/lk/ijse/dep/ManageCustomer/view/SearchForm.fxml");
             Parent root = FXMLLoader.load(resource);
             Scene mainScene = new Scene(root);
             primaryStage.setScene(mainScene);
