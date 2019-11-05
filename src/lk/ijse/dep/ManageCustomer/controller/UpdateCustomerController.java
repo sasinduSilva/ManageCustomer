@@ -31,14 +31,5 @@ public class UpdateCustomerController {
     }
 
 
-    public String getLastCustomerId() throws SQLException {
-        Connection connection = DBConnection.getInstance().getConnection();
-        PreparedStatement pstm = connection.prepareStatement("SELECT Id FROM Customer ORDER BY Id DESC LIMIT 1");
-        ResultSet rst = pstm.executeQuery();
-        if (rst.next()){
-            return rst.getString(1);
-        }else{
-            return null;
-        }
-    }
+
 }
