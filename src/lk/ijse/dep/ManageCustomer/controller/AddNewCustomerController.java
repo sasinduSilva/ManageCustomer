@@ -8,10 +8,7 @@ import javafx.scene.layout.AnchorPane;
 import lk.ijse.dep.ManageCustomer.db.DBConnection;
 import lk.ijse.dep.ManageCustomer.util.CustomerTM;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class AddNewCustomerController {
     public TextField txtId;
@@ -125,6 +122,21 @@ public class AddNewCustomerController {
         pstm.setString(3, customer.getAddress());
         if (pstm.executeUpdate() == 0){
             throw new RuntimeException("Something went wrong");
+        }
+    }
+
+    private void loadAllCustomers() throws SQLException {
+        Connection connection = DBConnection.getInstance().getConnection();
+        Statement stm = connection.createStatement();
+        ResultSet rst = stm.executeQuery("SELECT * FROM Customer");
+
+        ObservableList<CustomerTM> customers = tblCustome.getItems();
+        customers.clear();
+
+        while (rst.next()) {
+            customers.add(new CustomerTM(rst.getString(1),
+                    rst.getString(2),
+                    rst.getString(3)));
         }
     }
 
