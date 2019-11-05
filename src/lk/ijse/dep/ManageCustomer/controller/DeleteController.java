@@ -1,6 +1,8 @@
 package lk.ijse.dep.ManageCustomer.controller;
 
 import com.jfoenix.controls.JFXTextField;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -55,6 +57,20 @@ public class DeleteController implements Initializable {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        tblCstmrs.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<CustomerTM>() {
+            @Override
+            public void changed(ObservableValue<? extends CustomerTM> observable, CustomerTM oldValue, CustomerTM newValue) {
+                CustomerTM selectedItem = tblCstmrs.getSelectionModel().getSelectedItem();
+                if (selectedItem!=null){
+                    txtId.setText(selectedItem.getId());
+                    txtName.setText(selectedItem.getName());
+                    txtAddress.setText(selectedItem.getAddress());
+
+
+                }
+            }
+        });
 
 
     }
