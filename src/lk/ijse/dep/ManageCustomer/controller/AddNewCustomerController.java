@@ -1,10 +1,8 @@
 package lk.ijse.dep.ManageCustomer.controller;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import lk.ijse.dep.ManageCustomer.db.DBConnection;
@@ -25,6 +23,7 @@ public class AddNewCustomerController {
     public TableColumn clmAddress;
     public Button btnNew;
     public AnchorPane window1;
+    public Button btnSave;
 
 
     public void initialize() {
@@ -86,7 +85,25 @@ public class AddNewCustomerController {
 
     public void saveOnAction(ActionEvent actionEvent) {
 
-
+        if (!txtName.getText().matches("[A-Za-z][A-Za-z. ]+")) {
+            new Alert(Alert.AlertType.ERROR, "Invalid Name").show();
+            return;
+        }
+        if (btnSave.getText().equals("Save")) {
+            ObservableList<CustomerTM> customers = tblCustome.getItems();
+            CustomerTM newCustomer = new CustomerTM(
+                    txtId.getText(),
+                    txtName.getText(),
+                    txtAddress.getText()
+            );
+            try {
+                saveCustomer(newCustomer);
+                customers.add(newCustomer);
+                addNewOnAction(actionEvent);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public String getLastCustomerId() throws SQLException{
