@@ -7,7 +7,6 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane fx:id="root" prefHeight="531.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.ManageCustomer.controller.DeleteController">
    <children>
       <TableView fx:id="tblCstmrs" layoutX="123.0" layoutY="281.0" prefHeight="200.0" prefWidth="358.0">
@@ -17,14 +16,15 @@
             <TableColumn prefWidth="130.0" text="Address" />
         </columns>
       </TableView>
-      <Label alignment="CENTER" layoutX="37.0" layoutY="71.0" prefHeight="16.0" prefWidth="43.0" text="Id" />
-      <Label alignment="CENTER" layoutX="37.0" layoutY="110.0" prefHeight="16.0" prefWidth="43.0" text="Name" />
-      <Label alignment="CENTER" layoutX="25.0" layoutY="148.0" prefHeight="16.0" prefWidth="66.0" text="Address" />
+      <Label alignment="CENTER" layoutX="36.0" layoutY="59.0" prefHeight="16.0" prefWidth="43.0" text="Id" />
+      <Label alignment="CENTER" layoutX="36.0" layoutY="98.0" prefHeight="16.0" prefWidth="43.0" text="Name" />
+      <Label alignment="CENTER" layoutX="25.0" layoutY="136.0" prefHeight="16.0" prefWidth="66.0" text="Address" />
       <JFXTextField fx:id="txtId" layoutX="147.0" layoutY="55.0" prefHeight="24.0" prefWidth="193.0" />
       <JFXTextField fx:id="txtName" layoutX="147.0" layoutY="94.0" prefHeight="24.0" prefWidth="193.0" />
       <JFXTextField fx:id="txtAddress" layoutX="147.0" layoutY="132.0" prefHeight="24.0" prefWidth="193.0" />
       <Button fx:id="btnDelete" layoutX="162.0" layoutY="221.0" mnemonicParsing="false" onAction="#btnDelete_OnAction" text="Delete" />
-      <Button fx:id="btnCncl" layoutX="256.0" layoutY="221.0" mnemonicParsing="false" onAction="#btnCncl_OnAction" text="Cancel" />
+      <Button fx:id="btnCncl" layoutX="256.0" layoutY="221.0" mnemonicParsing="false" onAction="#btnDelete_OnAction" text="Cancel" />
       <Label alignment="CENTER" layoutX="245.0" layoutY="14.0" prefHeight="26.0" prefWidth="116.0" text="Delete Customer" />
+      <Button fx:id="btnHome" layoutX="510.0" layoutY="491.0" mnemonicParsing="false" onAction="#btnHome_OnAction" text="Home" />
    </children>
 </AnchorPane>

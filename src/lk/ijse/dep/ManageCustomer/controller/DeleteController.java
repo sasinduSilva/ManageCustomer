@@ -6,15 +6,20 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import lk.ijse.dep.ManageCustomer.TM.CustomerTM;
 import lk.ijse.dep.ManageCustomer.db.DBConnection;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -32,6 +37,7 @@ public class DeleteController implements Initializable {
     public JFXTextField txtAddress;
     public Button btnDelete;
     public Button btnCncl;
+    public Button btnHome;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -106,4 +112,14 @@ public class DeleteController implements Initializable {
     }
 
 
+    public void btnHome_OnAction(ActionEvent actionEvent) throws IOException {
+
+        Parent root = FXMLLoader.load(this.getClass().getResource("/lk/ijse/dep/ManageCustomer/view/Dashboard.fxml"));
+        Scene scene = new Scene(root);
+        Stage primaryStage = (Stage) this.root.getScene().getWindow();
+        primaryStage.setScene(scene);
+        primaryStage.centerOnScreen();
+        primaryStage.show();
+
+    }
 }
